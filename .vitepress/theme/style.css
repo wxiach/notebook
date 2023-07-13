@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+/* Custom styles */
+
+:root {
+  /* Override VitePress font variables */
+  --vp-font-family-base: Arial, Helvetica, sans-serif;
+  /* Use Fira Mono for monospace/code blocks */
+  --vp-font-family-mono: 'Fira Mono', Consolas, Monaco, 'Courier New', monospace;
+}
+
+/* You can add more custom styles below */
