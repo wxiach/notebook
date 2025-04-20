@@ -32,9 +32,10 @@ yarn-error.log*
 *.bak
 *.orig
 
-# Obsidian Vault Config
-.obsidian/
-.obsidian/workspace
+# Obsidian Temporary Files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
 
 # VitePress Specific
 .vitepress/cache/
