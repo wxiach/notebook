@@ -1,2 +1,43 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor Configuration
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Dependency Directories
+node_modules/
+
+# Build Output/Target Directories
+build/
+dist/
+target/
+out/
+
+# Log Files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary Files
+*~
+*.tmp
+*.swp
+*.bak
+*.orig
+
+# Obsidian Vault Config
+.obsidian/
 .obsidian/workspace
-node_modules
+
+# VitePress Specific
+.vitepress/cache/
+.vitepress/dist/
+.temp/
+.cache/
