@@ -17,56 +17,50 @@ export const sidebarConfig = {
       ],
       collapsed: false,
     },
-  ],
-  '/java concurrency/': [
     {
-      text: '基础概念',
+      text: '并发编程',
       items: [
-        { text: '多线程基础概念', link: '/java concurrency/多线程基础概念' },
-        { text: '线程安全问题', link: '/java concurrency/线程安全问题' },
+        { text: '多线程基础概念', link: '/java/多线程基础概念' },
+        { text: '线程安全问题', link: '/java/线程安全问题' },
+        { text: '如何优雅的终止线程', link: '/java/如何优雅的终止线程' },
       ],
       collapsed: false,
     },
-    {
-      text: '常用写法',
-      items: [{ text: '如何优雅的终止线程', link: '/java concurrency/如何优雅的终止线程' }],
-      collapsed: false,
-    },
   ],
-  '/web server/': [
+  '/web-server/': [
     {
       text: 'Tomcat',
       items: [
-        { text: '简单理解Tomcat的各个组件', link: '/web server/Tomcat/简单理解Tomcat的各个组件' },
-        { text: 'Tomcat生命周期管理', link: '/web server/Tomcat/Tomcat生命周期管理' },
-        { text: 'Tomcat自定义类加载器', link: '/web server/Tomcat/Tomcat自定义类加载器' },
+        { text: '简单理解Tomcat的各个组件', link: '/web-server/tomcat/简单理解Tomcat的各个组件' },
+        { text: 'Tomcat生命周期管理', link: '/web-server/tomcat/Tomcat生命周期管理' },
+        { text: 'Tomcat自定义类加载器', link: '/web-server/tomcat/Tomcat自定义类加载器' },
       ],
       collapsed: false,
     },
     {
       text: 'Netty',
       items: [
-        { text: 'ChannelInboundHandler', link: '/web server/Netty/ChannelInboundHandler' },
-        { text: 'Overview', link: '/web server/Netty/Overview' },
+        { text: 'ChannelInboundHandler', link: '/web-server/netty/ChannelInboundHandler' },
+        { text: 'Overview', link: '/web-server/netty/Overview' },
       ],
       collapsed: false,
     },
   ],
-  '/spring notes/': [
+  '/spring-notes/': [
     {
       text: 'Spring',
       items: [
-        { text: '导读', link: '/spring notes/Spring/导读' },
-        { text: 'Spring 容器刷新流程', link: '/spring notes/Spring/Spring 容器刷新流程' },
-        { text: '容器启动流程', link: '/spring notes/Spring/容器启动流程' },
-        { text: '组件注册', link: '/spring notes/Spring/组件注册' },
-        { text: 'SpringMVC 初始化流程', link: '/spring notes/Spring/SpringMVC 初始化流程' },
+        { text: '导读', link: '/spring-notes/spring/导读' },
+        { text: 'Spring 容器刷新流程', link: '/spring-notes/spring/Spring 容器刷新流程' },
+        { text: '容器启动流程', link: '/spring-notes/spring/容器启动流程' },
+        { text: '组件注册', link: '/spring-notes/spring/组件注册' },
+        { text: 'SpringMVC 初始化流程', link: '/spring-notes/spring/SpringMVC 初始化流程' },
       ],
       collapsed: false,
     },
     {
       text: 'SpringBoot',
-      items: [{ text: '分析SpringBoot 启动流程', link: '/spring notes/SpringBoot/分析SpringBoot 启动流程' }],
+      items: [{ text: '分析SpringBoot 启动流程', link: '/spring-notes/boot/分析SpringBoot 启动流程' }],
       collapsed: false,
     },
   ],
@@ -137,22 +131,22 @@ export const sidebarConfig = {
       collapsed: true,
     },
   ],
-  '/design pattern/': [
+  '/design-pattern/': [
     {
       text: '设计模式',
-      items: [{ text: '观察者模式到事件总线', link: '/design pattern/观察者模式到事件总线' }],
+      items: [{ text: '观察者模式到事件总线', link: '/design-pattern/观察者模式到事件总线' }],
       collapsed: true,
     },
   ],
 
-  '/development tools/': [
+  '/dev-tools/': [
     {
       text: '编程工具',
       items: [
-        { text: 'Git 速查手册', link: '/development tools/Git 速查手册' },
+        { text: 'Git 速查手册', link: '/dev-tools/Git 速查手册' },
         {
           text: 'Gradle 使用误区：从本地安装到 Wrapper',
-          link: '/development tools/Gradle 使用误区：从本地安装到 Wrapper',
+          link: '/dev-tools/Gradle 使用误区：从本地安装到 Wrapper',
         },
       ],
       collapsed: true,

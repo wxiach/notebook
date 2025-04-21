@@ -3,9 +3,8 @@ export const navConfig = [
     text: 'Java 技术栈',
     items: [
       { text: 'Java 基础知识', link: '/java/泛型擦除和重载之间的冲突' },
-      { text: 'Java 并发编程', link: '/java concurrency/多线程基础概念' },
-      { text: 'Spring 全家桶', link: '/spring notes/SpringBoot/分析SpringBoot 启动流程' },
-      { text: 'Tomcat / Netty', link: '/web server/Tomcat/简单理解Tomcat的各个组件' },
+      { text: 'Spring 全家桶', link: '/spring-notes/boot/分析SpringBoot 启动流程' },
+      { text: 'Tomcat / Netty', link: '/web-server/tomcat/简单理解Tomcat的各个组件' },
     ],
   },
   {
@@ -20,8 +19,8 @@ export const navConfig = [
     items: [
       { text: '算法', link: '/algorithm/KMP 字符串快速匹配' },
       { text: '计算机网络', link: '/network/同源策略' },
-      { text: '设计模式', link: '/design pattern/观察者模式到事件总线' },
-      { text: '开发工具', link: '/development tools/Git 速查手册' },
+      { text: '设计模式', link: '/design-pattern/观察者模式到事件总线' },
+      { text: '开发工具', link: '/dev-tools/Git 速查手册' },
     ],
   },
   {
