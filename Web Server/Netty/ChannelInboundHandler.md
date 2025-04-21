@@ -1,3 +1,5 @@
+# ChannelInboundHandler
+
 > Netty中处理入站I/O事件的Handler
 
 `ChannelInboundHandlerAdapter`是ChannelInboundHandler的一个实现，它提供了此接口中方法的默认实现。这使得您可以只重写您感兴趣的方法，而不是所有方法。

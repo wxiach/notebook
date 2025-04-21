@@ -1,3 +1,5 @@
+# Rust 安装
+
 > 学习资料：[Rust语言圣经](https://course.rs/about-book.html)
 
 ### 安装

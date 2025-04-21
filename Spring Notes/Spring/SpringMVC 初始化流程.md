@@ -1,3 +1,5 @@
+# SpringMVC 初始化流程
+
 经过对Spring基础内容的学习，这一篇，基本上就是对Spring内容的一个小小的应用了。
 
 Java Web技术是基于Servlet的，而SpringMVC的技术，也是围绕着`DispatcherServlet`来展开的。它的继承关系如下

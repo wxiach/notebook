@@ -1,4 +1,4 @@
-# React 组件通信方式小记：父传子、子传父、兄弟、跨层
+# React 组件通信方式
 
 > 这几天复习了一下 React 中组件之间的通信方式。虽然这些内容之前用过，但总觉得理解还停留在“知道怎么写”的层面，这次想系统梳理一下，尤其是几种方式之间的区别和适用场景。主要涉及四种常见通信方式：父传子、子传父、兄弟组件通信（通过状态提升）、跨层通信（使用 Context）。简单记录一下我理解的过程和示例代码，方便以后回顾。
 
@@ -9,21 +9,22 @@
 ```javascript
 function Son(props) {
   // props 是一个对象，包含所有父组件传递过来的数据
-  console.log(props);
-  return <div>this is son {props.name}</div>;
+  console.log(props)
+  return <div>this is son {props.name}</div>
 }
 
 function App() {
-  const name = 'this is app name';
+  const name = 'this is app name'
   return (
     <div>
       <Son name={name} />
     </div>
-  );
+  )
 }
 ```
 
 **要点：**
+
 - 父组件 `<Son name={name} />` 中，name 是自定义属性。
 - 子组件通过 `props.name` 读取这个值。
 
@@ -45,29 +46,30 @@ function App() {
 
 ```javascript
 function Son({ onGetSonMsg }) {
-  const sonMsg = 'this is son msg';
+  const sonMsg = 'this is son msg'
   return (
     <div>
       this is Son
       <button onClick={() => onGetSonMsg(sonMsg)}>sendMsg</button>
     </div>
-  );
+  )
 }
 
 function App() {
   const getMsg = (msg) => {
-    console.log(msg); // 接收到子组件传来的数据
-  };
+    console.log(msg) // 接收到子组件传来的数据
+  }
   return (
     <div>
       this is App
       <Son onGetSonMsg={getMsg} />
     </div>
-  );
+  )
 }
 ```
 
 **要点：**
+
 - 父组件把一个函数 `getMsg` 传给子组件。
 - 子组件在事件中调用这个函数，把数据当参数传出去。
 
@@ -76,6 +78,7 @@ function App() {
 兄弟之间不能直接通信，但可以借助共同的父组件。方法是把需要共享的数据提升到父组件的 state 中。
 
 **实现步骤：**
+
 1. 子组件 A 通过 props 向父组件传递数据。
 2. 父组件接收到数据后，更新自己的 state。
 3. 再通过 props 将数据传递给兄弟组件 B。
@@ -87,41 +90,41 @@ function App() {
 当通信的组件相隔层级比较深时，一层一层地 props 传下去很麻烦，可以使用 React 的 Context。
 
 **实现步骤：**
+
 - 使用 `createContext` 创建一个上下文对象。
 - 在顶层组件中用 `<Provider>` 提供数据。
 - 在需要的子组件中用 `useContext` 获取数据。
 
 ```javascript
-const MsgContext = React.createContext();
+const MsgContext = React.createContext()
 
 function App() {
   return (
     <MsgContext.Provider value="this is app name">
       <A />
     </MsgContext.Provider>
-  );
+  )
 }
 
 function A() {
-  return <B />;
+  return <B />
 }
 
 function B() {
-  const msg = useContext(MsgContext);
-  return <div>{msg}</div>;
+  const msg = useContext(MsgContext)
+  return <div>{msg}</div>
 }
 ```
 
 ## 小结
 
-| 通信方式 | 应用场景       | 实现方式                   |
-|------------|----------------|----------------------------|
-| 父传子     | 最常见         | 通过 props                |
-| 子传父     | 子组件向父组件汇报 | 回调函数                   |
-| 兄弟通信   | 同级组件       | 状态提升 + 父组件中转     |
-| 跨层通信   | 深层嵌套组件   | Context + Provider        |
+| 通信方式 | 应用场景           | 实现方式              |
+| -------- | ------------------ | --------------------- |
+| 父传子   | 最常见             | 通过 props            |
+| 子传父   | 子组件向父组件汇报 | 回调函数              |
+| 兄弟通信 | 同级组件           | 状态提升 + 父组件中转 |
+| 跨层通信 | 深层嵌套组件       | Context + Provider    |
 
 React 的通信模型虽然看起来种类多，但归根到底还是数据的单向流动：从父传子，从子传父，一切都在组件的组合结构中体现。
 
 越复杂的通信需求，越需要我们在设计组件结构时多想一步。
-

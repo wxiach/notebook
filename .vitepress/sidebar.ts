@@ -2,12 +2,19 @@ export const sidebarConfig = {
   '/Java/': [
     {
       text: '语法',
-      items: [{ text: '泛型擦除和重载的之间冲突', link: 'Java 基础知识/泛型擦除和重载之间的冲突' }],
+      items: [{ text: '泛型擦除和重载之间的冲突', link: '/Java/泛型擦除和重载之间的冲突' }],
       collapsed: false,
     },
     {
       text: '常用库',
-      items: [{ text: '如何使用 SLF4J 日志框架', link: '/Java 基础知识/如何使用 SLF4J 日志框架' }],
+      items: [
+        { text: '如何使用 SLF4J 日志框架', link: '/Java/如何使用 SLF4J 日志框架' },
+        {
+          text: 'CGLIB 在 Java 21 下报 NoClassDefFoundError 的排查与解决',
+          link: '/Java/CGLIB 在 Java 21 下报 NoClassDefFoundError 的排查与解决',
+        },
+        { text: 'JDK 与 CGLIB 动态代理最小示例笔记', link: '/Java/JDK 与 CGLIB 动态代理最小示例笔记' },
+      ],
       collapsed: false,
     },
   ],
@@ -49,17 +56,17 @@ export const sidebarConfig = {
     {
       text: 'Spring',
       items: [
-        { text: '导读', link: '/Spring/SpringFramework/导读' },
-        { text: '理解Spring容器刷新流程', link: '/Spring/SpringFramework/理解Spring容器刷新流程' },
-        { text: '容器启动流程', link: '/Spring/SpringFramework/容器启动流程' },
-        { text: '组件注册', link: '/Spring/SpringFramework/组件注册' },
-        { text: '理解SpringMVC初始化流程', link: '/Spring/SpringMVC/理解SpringMVC初始化流程' },
+        { text: '导读', link: '/Spring Notes/Spring/导读' },
+        { text: 'Spring 容器刷新流程', link: '/Spring Notes/Spring/Spring 容器刷新流程' },
+        { text: '容器启动流程', link: '/Spring Notes/Spring/容器启动流程' },
+        { text: '组件注册', link: '/Spring Notes/Spring/组件注册' },
+        { text: 'SpringMVC 初始化流程', link: '/Spring Notes/Spring/SpringMVC 初始化流程' },
       ],
       collapsed: false,
     },
     {
       text: 'SpringBoot',
-      items: [{ text: '分析SpringBoot 启动流程', link: '/Spring/SpringBoot/分析SpringBoot 启动流程' }],
+      items: [{ text: '分析SpringBoot 启动流程', link: '/Spring Notes/SpringBoot/分析SpringBoot 启动流程' }],
       collapsed: false,
     },
   ],
@@ -67,73 +74,58 @@ export const sidebarConfig = {
   '/Javascript/': [
     {
       text: 'Javascript',
-      items: [{ text: 'Javascript中Date对象的常用用法', link: '/Javascript/Javascript中Date对象的常用用法' }],
+      items: [{ text: 'Javascript Date 常用方法', link: '/Javascript/Javascript Date 常用方法' }],
       collapsed: true,
     },
   ],
 
   '/React/': [
     {
-      text: 'React',
-      items: [{ text: 'React 列表渲染基础示例', link: '/React/React 列表渲染基础示例' }],
-      collapsed: true,
+      text: 'React 基础',
+      items: [
+        { text: 'React 列表渲染', link: '/React/React 列表渲染' },
+        { text: 'React 事件处理', link: '/React/React 事件处理' },
+        { text: 'React 受控表单绑定', link: '/React/React 受控表单绑定' },
+        {
+          text: 'React 获取 DOM：useRef 操作非受控组件',
+          link: '/React/React 获取 DOM：useRef 操作非受控组件',
+        },
+        {
+          text: 'React 组件通信方式',
+          link: '/React/React 组件通信方式',
+        },
+        {
+          text: 'React useEffect：副作用管理',
+          link: '/React/React useEffect：副作用管理',
+        },
+        {
+          text: 'React 自定义 Hook：抽象与复用',
+          link: '/React/React 自定义 Hook：抽象与复用',
+        },
+        { text: 'React 路由导航配置', link: '/React/React 路由导航配置' },
+      ],
+      collapsed: false,
+    },
+    {
+      text: '状态管理',
+      items: [
+        {
+          text: '用 React 自带能力实现全局状态管理与持久化共享',
+          link: '/React/用 React 自带能力实现全局状态管理与持久化共享',
+        },
+        {
+          text: 'Redux 学习记录：从简单计数器到 React 集成',
+          link: '/React/Redux 学习记录：从简单计数器到 React 集成',
+        },
+      ],
+      collapsed: false,
     },
   ],
 
   '/Algorithm/': [
     {
       text: '算法',
-      items: [{ text: 'KMP 字符串快速匹配', link: '/算法/KMP 字符串快速匹配' }],
-      collapsed: true,
-    },
-  ],
-
-  '/Design Pattern/': [
-    {
-      text: '设计模式',
-      items: [
-        { text: '导读', link: '/设计模式/导读' },
-        {
-          text: '创建型模式',
-          items: [
-            { text: '抽象工厂', link: '/设计模式/创建型模式/抽象工厂' },
-            { text: '单例', link: '/设计模式/创建型模式/单例' },
-            { text: '工厂方法', link: '/设计模式/创建型模式/工厂方法' },
-            { text: '生成器', link: '/设计模式/创建型模式/生成器' },
-            { text: '原型', link: '/设计模式/创建型模式/原型' },
-          ],
-          collapsed: true,
-        },
-        {
-          text: '结构型模式',
-          items: [
-            { text: '代理', link: '/设计模式/结构型模式/代理' },
-            { text: '桥接', link: '/设计模式/结构型模式/桥接' },
-            { text: '适配器', link: '/设计模式/结构型模式/适配器' },
-            { text: '外观', link: '/设计模式/结构型模式/外观' },
-            { text: '享元', link: '/设计模式/结构型模式/享元' },
-            { text: '装饰', link: '/设计模式/结构型模式/装饰' },
-            { text: '组合', link: '/设计模式/结构型模式/组合' },
-          ],
-          collapsed: true,
-        },
-        {
-          text: '行为模式',
-          items: [
-            { text: '备忘录', link: '/设计模式/行为模式/备忘录' },
-            { text: '策略', link: '/设计模式/行为模式/策略' },
-            { text: '迭代器', link: '/设计模式/行为模式/迭代器' },
-            { text: '访问者', link: '/设计模式/行为模式/访问者' },
-            { text: '观察者', link: '/设计模式/行为模式/观察者' },
-            { text: '命令', link: '/设计模式/行为模式/命令' },
-            { text: '模版方法', link: '/设计模式/行为模式/模版方法' },
-            { text: '责任链', link: '/设计模式/行为模式/责任链' },
-            { text: '中介者', link: '/设计模式/行为模式/中介者' },
-            { text: '状态', link: '/设计模式/行为模式/状态' },
-          ],
-          collapsed: true,
-        },
-      ],
+      items: [{ text: 'KMP 字符串快速匹配', link: '/Algorithm/KMP 字符串快速匹配' }],
       collapsed: true,
     },
   ],
@@ -141,7 +133,7 @@ export const sidebarConfig = {
   '/Network/': [
     {
       text: '计算机网络',
-      items: [{ text: '计算机网络', link: '/计算机网络/计算机网络' }],
+      items: [{ text: '同源策略', link: '/Network/同源策略' }],
       collapsed: true,
     },
   ],
@@ -149,7 +141,13 @@ export const sidebarConfig = {
   '/Development Tools/': [
     {
       text: '编程工具',
-      items: [{ text: 'Git', link: '/编程工具/Git' }],
+      items: [
+        { text: 'Git 速查手册', link: '/Development Tools/Git 速查手册' },
+        {
+          text: 'Gradle 使用误区：从本地安装到 Wrapper',
+          link: '/Development Tools/Gradle 使用误区：从本地安装到 Wrapper',
+        },
+      ],
       collapsed: true,
     },
   ],
@@ -157,7 +155,7 @@ export const sidebarConfig = {
   '/Rust/': [
     {
       text: 'Rust',
-      items: [{ text: 'Rust 语言', link: '/Rust/Rust 语言' }],
+      items: [{ text: 'Rust 安装', link: '/Rust/Rust 安装' }],
       collapsed: true,
     },
   ],

@@ -1,4 +1,5 @@
-# React 中如何获取 DOM：用 useRef 操作非受控组件
+# React 获取 DOM：useRef 操作非受控组件
+
 ## 📌 场景说明
 
 在写 React 的时候，通常我们是通过“受控组件”来管理表单元素，比如用 `useState` 控制 `<input>` 的值。
@@ -8,7 +9,7 @@
 比如下面这段代码：
 
 ```jsx
-import { useRef } from "react"
+import { useRef } from 'react'
 
 // 1. useRef 生成 ref 对象，绑定到 DOM 标签身上
 // 2. DOM 可用时，通过 ref.current 获取真实 DOM
@@ -27,8 +28,6 @@ function App() {
 export default App
 ```
 
----
-
 ## 🧠 核心理解
 
 这里用到了 `useRef`，它的作用是生成一个可变的引用对象，并且可以挂载到任意 DOM 元素上。
@@ -45,15 +44,11 @@ export default App
 - 读取元素的 `scrollTop`、宽高等属性
 - 与基于 DOM 的第三方库（比如一些图表库）集成
 
----
-
 ## ⚠️ 一点小提醒
 
 虽然 `useRef` 很方便，但也要注意它**不会引发组件的重新渲染**，所以它不适合用来存储那些希望“响应式更新”的数据。
 
 它更像是一个“通用口袋”，可以放点什么，但不会影响 React 的生命周期。
-
----
 
 ## ✍️ 后记
 
