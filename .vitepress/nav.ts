@@ -20,6 +20,7 @@ export const navConfig = [
     items: [
       { text: '算法', link: '/Algorithm/KMP 字符串快速匹配' },
       { text: '计算机网络', link: '/Network/同源策略' },
+      { text: '设计模式', link: '/Design Pattern/观察者模式到事件总线' },
       { text: '开发工具', link: '/Development Tools/Git 速查手册' },
     ],
   },

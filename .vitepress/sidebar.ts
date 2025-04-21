@@ -137,6 +137,13 @@ export const sidebarConfig = {
       collapsed: true,
     },
   ],
+  '/Design Pattern/': [
+    {
+      text: '设计模式',
+      items: [{ text: '观察者模式到事件总线', link: '/Design Pattern/观察者模式到事件总线' }],
+      collapsed: true,
+    },
+  ],
 
   '/Development Tools/': [
     {
