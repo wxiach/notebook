@@ -2,9 +2,9 @@ export const navConfig = [
   {
     text: 'Java 技术栈',
     items: [
-      { text: 'Java 基础知识', link: '/java/泛型擦除和重载之间的冲突' },
-      { text: 'Spring 全家桶', link: '/spring-notes/boot/分析SpringBoot 启动流程' },
-      { text: 'Tomcat / Netty', link: '/web-server/tomcat/简单理解Tomcat的各个组件' },
+      { text: 'Java 基础', link: '/java/泛型擦除和重载之间的冲突' },
+      { text: 'Spring Framework', link: '/spring-notes/boot/分析SpringBoot 启动流程' },
+      { text: 'Tomcat & Netty', link: '/web-server/tomcat/简单理解Tomcat的各个组件' },
     ],
   },
   {

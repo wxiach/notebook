@@ -2,14 +2,6 @@
 
 > 这是一份个人备忘，记录两种常见 Java 动态代理方式的最小可运行代码，方便日后查阅 Spring AOP 等框架源码时快速对照。
 
-## 目录
-
-1. [动态代理简介](#动态代理简介)
-2. [JDK Dynamic Proxy](#jdk-dynamic-proxy)
-3. [CGLIB Proxy](#cglib-proxy)
-4. [两种方式对比](#两种方式对比)
-5. [可能的扩展实践](#可能的扩展实践)
-
 ## 动态代理简介
 
 - **静态代理**：手写 `ProxyFoo` 类，将调用逐一转发到 `Foo`。
@@ -146,18 +138,3 @@ public class CglibProxyDemo {
 | 额外依赖             |      无      |      `cglib + asm`       |
 | Spring 默认策略      | 有接口 → JDK |      无接口 → CGLIB      |
 | 运行时性能差异       |     极小     | 极小（启动生成子类略慢） |
-
-## 可能的扩展实践
-
-1. **拦截器链**：在 `invoke`/`intercept` 中串联多个处理器，模拟 Spring AOP 的责任链。
-2. **注解驱动代理**：扫描 `@Transactional` 等注解，根据需要为 Bean 创建代理。
-3. **代理缓存**：单例 Bean 只生成一次代理，避免重复开销。
-4. **尝试 Byte Buddy**：现代字节码框架；Spring 6+ 与 Hibernate 6+ 已开始使用。
-
-### 小结
-
-- JDK Dynamic Proxy 适用于接口场景。
-- CGLIB 适用于没有接口、且类／方法非 `final` 的场景。
-- 两者都在方法调用时织入横切逻辑，底层实现细节不同。
-
-以上示例代码共约 50 行，足以支撑阅读 Spring AOP 的核心实现。

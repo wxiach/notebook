@@ -5,6 +5,7 @@ SLF4J（Simple Logging Facade for Java）是一个日志抽象层，它允许我
 ## 方式一：使用 Logback 作为 SLF4J 的实现
 
 首先，我需要在 `pom.xml` 中引入 Logback 依赖，作为 SLF4J 的实现：
+
 ```xml
 <dependency>
     <groupId>ch.qos.logback</groupId>
@@ -67,8 +68,9 @@ public class Bootstrap {
 这段代码会在控制台输出如下内容：
 
 ```yaml
-2025-04-20 12:34:56.789  INFO   --- [           main] com.example.Bootstrap : Log started!
+2025-04-20 12:34:56.789  INFO   --- [           main] com.example.Bootstrap: Log started!
 ```
+
 ## 方式二：使用 slf4j-simple 作为 SLF4J 的实现
 
 如果项目对日志需求较为简单，并且不想做过多的配置，我可以选择使用 `slf4j-simple`，它是 SLF4J 提供的一个轻量级实现，适合简单的日志记录。

@@ -1,29 +1,28 @@
 export const sidebarConfig = {
   '/java/': [
     {
-      text: '语法',
-      items: [{ text: '泛型擦除和重载之间的冲突', link: '/java/泛型擦除和重载之间的冲突' }],
-      collapsed: false,
-    },
-    {
-      text: '常用库',
+      text: '基础',
       items: [
-        { text: '如何使用 SLF4J 日志框架', link: '/java/如何使用 SLF4J 日志框架' },
-        {
-          text: 'CGLIB 在 Java 21 下报 NoClassDefFoundError 的排查与解决',
-          link: '/java/CGLIB 在 Java 21 下报 NoClassDefFoundError 的排查与解决',
-        },
+        { text: '泛型擦除和重载之间的冲突', link: '/java/泛型擦除和重载之间的冲突' },
+        { text: 'Java 模块访问限制及其对 CGLIB 的影响', link: '/java/Java 模块访问限制及其对 CGLIB 的影响' },
         { text: 'JDK 与 CGLIB 动态代理最小示例笔记', link: '/java/JDK 与 CGLIB 动态代理最小示例笔记' },
       ],
       collapsed: false,
     },
     {
-      text: '并发编程',
+      text: '多线程',
       items: [
-        { text: '多线程基础概念', link: '/java/多线程基础概念' },
-        { text: '线程安全问题', link: '/java/线程安全问题' },
-        { text: '如何优雅的终止线程', link: '/java/如何优雅的终止线程' },
+        { text: '什么是多线程', link: '/java/concurrency/什么是多线程' },
+        { text: '线程安全问题', link: '/java/concurrency/线程安全问题' },
+        { text: '如何优雅的终止线程', link: '/java/concurrency/如何优雅的终止线程' },
+        { text: '理解 synchronized 关键字', link: '/java/concurrency/理解 synchronized 关键字' },
+        { text: '三种线程协作模式', link: '/java/concurrency/三种线程协作模式' },
       ],
+      collapsed: false,
+    },
+    {
+      text: '常用库',
+      items: [{ text: '如何使用 SLF4J 日志框架', link: '/java/如何使用 SLF4J 日志框架' }],
       collapsed: false,
     },
   ],
@@ -75,7 +74,7 @@ export const sidebarConfig = {
 
   '/react/': [
     {
-      text: 'React 基础',
+      text: '基础',
       items: [
         { text: 'React 列表渲染', link: '/react/React 列表渲染' },
         { text: 'React 事件处理', link: '/react/React 事件处理' },
