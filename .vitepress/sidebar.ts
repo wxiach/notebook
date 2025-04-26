@@ -16,7 +16,7 @@ export const sidebarConfig = {
         { text: '线程安全问题', link: '/java/concurrency/线程安全问题' },
         { text: '如何优雅的终止线程', link: '/java/concurrency/如何优雅的终止线程' },
         { text: '理解 synchronized 关键字', link: '/java/concurrency/理解 synchronized 关键字' },
-        { text: '三种线程协作模式', link: '/java/concurrency/三种线程协作模式' },
+        { text: 'wait-notify 使用全解', link: '/java/concurrency/wait-notify 使用全解' },
       ],
       collapsed: false,
     },

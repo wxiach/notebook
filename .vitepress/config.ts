@@ -1,14 +1,18 @@
 import { defineConfig } from 'vitepress'
 import { sidebarConfig } from './sidebar.js'
-import { navConfig } from './nav.js'
 
 export default defineConfig({
-  title: "SorenWei's Notes",
+  title: '无畏小生',
   description: '',
   head: [['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]],
   themeConfig: {
     logo: '/favicon.svg',
-    nav: navConfig,
+    nav: [
+      { text: 'Java', link: '/java/泛型擦除和重载之间的冲突' },
+      { text: '前端', link: '/javascript/Javascript Date 常用方法' },
+      { text: '算法', link: '/algorithm/KMP 字符串快速匹配' },
+      { text: '工具', link: '/rust/Rust 安装' },
+    ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/wxiach/notebook' }],
     sidebar: sidebarConfig,
     search: {
@@ -47,7 +51,7 @@ export default defineConfig({
         },
       },
     },
-    outline: { level: [2, 3], label: '页面导航' },
+    outline: { level: [2, 4], label: '页面导航' },
     lastUpdated: {
       text: '最后更新于',
     },
