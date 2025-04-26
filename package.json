@@ -6,21 +6,15 @@
   "scripts": {
     "dev": "vitepress dev .",
     "build": "vitepress build .",
-    "serve": "vitepress serve .vitepress/dist",
-    "clean": "rimraf .vitepress/dist .vitepress/cache"
+    "serve": "vitepress serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.8.1",
   "devDependencies": {
-    "@types/node": "^22.14.1",
-    "fast-glob": "^3.3.3",
-    "gray-matter": "^4.0.3",
-    "prettier": "3.5.3",
-    "rimraf": "^5.0.0",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.19.3",
-    "vitepress": "^1.6.3"
+    "@types/node": "^22.15.2",
+    "vitepress": "^1.6.3",
+    "vitepress-sidebar": "^1.31.1"
   }
 }
