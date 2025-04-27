@@ -2,16 +2,28 @@ import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
 
 const navConfig: any[] = [
+  { text: 'Javascript', link: '/javascript/' },
+  { text: 'React', link: '/react/' },
   { text: 'Java', link: '/java/' },
-  { text: '前端', link: '/frontend/' },
+  { text: 'Spring', link: '/spring/' },
+  { text: 'Tomcat', link: '/tomcat/' },
+  { text: 'Netty', link: '/netty/' },
+  { text: '多线程', link: '/concurrent/基础/什么是多线程' },
   { text: '算法', link: '/algorithms/' },
+  { text: '设计模式', link: '/patterns/' },
   { text: '工具', link: '/tools/' },
 ]
 
 const sidebarOptions: any[] = [
   { documentRootPath: '/', scanStartPath: 'java', resolvePath: '/java/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'frontend', resolvePath: '/frontend/', collapsed: false },
+  { documentRootPath: '/', scanStartPath: 'concurrent', resolvePath: '/concurrent/', collapsed: false },
+  { documentRootPath: '/', scanStartPath: 'spring', resolvePath: '/spring/', collapsed: false },
+  { documentRootPath: '/', scanStartPath: 'tomcat', resolvePath: '/tomcat/', collapsed: false },
+  { documentRootPath: '/', scanStartPath: 'netty', resolvePath: '/netty/', collapsed: false },
+  { documentRootPath: '/', scanStartPath: 'javascript', resolvePath: '/javascript/', collapsed: false },
+  { documentRootPath: '/', scanStartPath: 'react', resolvePath: '/react/', collapsed: false },
   { documentRootPath: '/', scanStartPath: 'algorithms', resolvePath: '/algorithms/', collapsed: false },
+  { documentRootPath: '/', scanStartPath: 'patterns', resolvePath: '/patterns/', collapsed: false },
   { documentRootPath: '/', scanStartPath: 'tools', resolvePath: '/tools/', collapsed: false },
 ]
 
