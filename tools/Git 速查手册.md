@@ -1,31 +1,34 @@
 # Git 速查手册
 
-### 一、 commit规范
+## 一、 commit 规范
 
 | feat   | chore  | fix  | refactor | style | perf | revert | test | ci  | docs |
 | ------ | ------ | ---- | -------- | ----- | ---- | ------ | ---- | --- | ---- |
 | 新功能 | 小改动 | 修复 | 重构     | 格式  | 优化 | 撤销   | 测试 | CI  | 文档 |
 
-### 二、创建密钥
+## 二、创建密钥
 
 ```bash
 ssh-keygen -t rsa -C "wxiach@gmail.com"
 ```
 
-### 三、参数配置
+## 三、参数配置
 
 ```bash
 # 查看全局配置
 git config --global --list
 
-#配置用户名
+# 配置用户名
 git config --global user.name = "wxiach"
 
-#配置邮箱
+# 配置邮箱
 git config --global user.email "wxiach@gmail.om"
+
+# 删除配置
+git config [--local | --global | --system] --unset <配置项名称>
 ```
 
-### 四、stash暂存代码、保持工作区干净
+## 四、stash 暂存代码、保持工作区干净
 
 ```bash
 # 保存当前未commit的代码
@@ -50,7 +53,7 @@ git stash pop
 git stash drop
 ```
 
-### 五、本地项目关联远程仓库
+## 五、本地项目关联远程仓库
 
 ```bash
 # 初始化本地仓库
@@ -66,7 +69,7 @@ git remote add origin git@github.com:wxiach/Lonicera.git
 git push -u origin main
 ```
 
-### 六、强制回退到某个commit版本
+## 六、强制回退到某个 commit 版本
 
 ```bash
 # 查找到对应的commit版本号
@@ -79,7 +82,7 @@ git reset --hard '版本号'
 git push -f
 ```
 
-### 七、修改.gitignore文件后
+## 七、修改.gitignore 文件后
 
 ```Shell
 # 清除暂存区
