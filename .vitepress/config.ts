@@ -2,29 +2,17 @@ import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
 
 const navConfig: any[] = [
-  { text: 'Javascript', link: '/javascript/' },
-  { text: 'React', link: '/react/' },
-  { text: 'Java', link: '/java/' },
-  { text: 'Spring', link: '/spring/' },
-  { text: 'Tomcat', link: '/tomcat/' },
-  { text: 'Netty', link: '/netty/' },
-  { text: '多线程', link: '/concurrent/基础/什么是多线程' },
-  { text: '算法', link: '/algorithms/' },
-  { text: '设计模式', link: '/patterns/' },
-  { text: '工具', link: '/tools/' },
+  { text: 'Java', link: '/docs/Java/基础/语法知识点' },
+  { text: '前端', link: '/docs/前端/JavaScript/Javascript Date 常用方法' },
+  { text: '算法', link: '/docs/算法/KMP 字符串快速匹配' },
+  { text: '编程基础', link: '/docs/编程基础/工具/Git 速查手册' },
 ]
 
 const sidebarOptions: any[] = [
-  { documentRootPath: '/', scanStartPath: 'java', resolvePath: '/java/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'concurrent', resolvePath: '/concurrent/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'spring', resolvePath: '/spring/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'tomcat', resolvePath: '/tomcat/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'netty', resolvePath: '/netty/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'javascript', resolvePath: '/javascript/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'react', resolvePath: '/react/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'algorithms', resolvePath: '/algorithms/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'patterns', resolvePath: '/patterns/', collapsed: false },
-  { documentRootPath: '/', scanStartPath: 'tools', resolvePath: '/tools/', collapsed: false },
+  { documentRootPath: '/docs', scanStartPath: 'Java', resolvePath: '/docs/Java/', collapsed: false },
+  { documentRootPath: '/docs', scanStartPath: '前端', resolvePath: '/docs/前端/', collapsed: false },
+  { documentRootPath: '/docs', scanStartPath: '算法', resolvePath: '/docs/算法/', collapsed: false },
+  { documentRootPath: '/docs', scanStartPath: '编程基础', resolvePath: '/docs/编程基础/', collapsed: false },
 ]
 
 const searchConfig: any = {
